@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La culture et les ethnies maliennes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FAFAFA;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #5D4037;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .message-inspirant {
+            background-color: #5D4037;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .intro-section h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .intro-section p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .ethnie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .ethnie-card {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .ethnie-card:hover {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #5D4037;
+        }
+
+        .ethnie-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .detail-page {
+            display: none;
+        }
+
+        .detail-page.active {
+            display: block;
+        }
+
+        .back-button {
+            background-color: #5D4037;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .detail-content {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .detail-content h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .detail-section {
+            margin-bottom: 25px;
+        }
+
+        .detail-section h3 {
+            color: #5D4037;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .detail-section p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #E0E0E0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border: 2px dashed #4CAF50;
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .form-section h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .form-section p {
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #4CAF50;
+            font-family: Arial, sans-serif;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #5D4037;
+        }
+
+        .confidentialite {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 13px;
+            border-left: 3px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE D'ACCUEIL -->
+<div id="homePage">
+    <header>
+        <h1>La culture et les ethnies maliennes</h1>
+    </header>
+
+    <div class="message-inspirant">
+        "N'oubliez pas d'où vous venez. Votre culture, c'est votre force."
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>Bienvenue dans l'histoire du Mali</h2>
+            <p>Tu cherches à en savoir plus sur la culture malienne ? Tu veux découvrir l'histoire de ton ethnie ou celle de tes voisins ? Tu es au bon endroit.</p>
+            <p><strong>Qu'est-ce qu'une ethnie ?</strong> Une ethnie, c'est un groupe de personnes qui partagent la même histoire, la même langue, les mêmes traditions et les mêmes coutumes. C'est comme une grande famille avec ses propres valeurs et sa propre manière de vivre.</p>
+            <p><strong>Qu'est-ce que la culture ?</strong> La culture, c'est tout ce qu'un peuple crée, fait et transmet. C'est la manière de s'habiller, de manger, de célébrer, de raconter des histoires, de respecter les ancêtres. C'est l'âme d'un peuple.</p>
+            <p>Sur ce site, tu trouveras tout ce que tu dois savoir sur les différentes ethnies du Mali. Leurs origines, leurs ancêtres, leurs langues, leurs traditions et leur culture. Clique sur l'ethnie que tu veux découvrir et commence ton voyage.</p>
+        </div>
+
+        <h2 style="color: #4CAF50; margin-bottom: 20px;">Choisis une ethnie</h2>
+
+        <div class="ethnie-grid">
+            <div class="ethnie-card" onclick="showEthnie('dogon')">
+                <h3>Les Dogons</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('peul')">
+                <h3>Les Peuls</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('sonrhai')">
+                <h3>Les Sonrhaï</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('soninke')">
+                <h3>Les Soninké</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('malinke')">
+                <h3>Les Malinké</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('bambara')">
+                <h3>Les Bambara</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('tuareg')">
+                <h3>Les Touareg</h3>
+            </div>
+            <div class="ethnie-card" onclick="showEthnie('bozo')">
+                <h3>Les Bozos</h3>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Une ethnie qu'on n'a pas encore ?</h2>
+            <p>Tu cherches une ethnie malienne qu'on n'a pas encore sur le site ? Dis-nous ! On va l'ajouter bientôt et tu seras parmi les premiers à être informé.</p>
+            <form onsubmit="submitForm(event)">
+                <input type="text" placeholder="Ton prénom" required>
+                <input type="text" placeholder="Ton nom" required>
+                <input type="text" placeholder="Ton numéro WhatsApp" required>
+                <textarea placeholder="Quelle ethnie cherches-tu ?" rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div class="confidentialite">
+                ✓ Tes infos sont confidentielles. On les garde secrètes. On te contactera par WhatsApp ou par email quand on aura des nouvelles ethnies à te montrer. Ou tu peux rejoindre notre communauté WhatsApp pour être informé en premier !
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGES DÉTAILS ETHNIES -->
+
+<!-- DOGONS -->
+<div id="dogon" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Dogons</h2>
+            <div class="image-placeholder">[Image représentant la culture Dogon - Falaise de Bandiagara]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Dogons viennent de la région de Bandiagara, une magnifique falaise au centre du Mali. Selon leur histoire, ils se sont installés là il y a des siècles en fuyant les invasions. Ils ont choisi les falaises pour se protéger et construire une vie loin des plaines. Les Dogons sont des gens courageux qui ont bâti un empire dans les rochers.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les Dogons respectent beaucoup leurs ancêtres. Selon leurs légendes, leurs premiers ancêtres venaient du ciel et ont fondé leur civilisation. Ils racontent des histoires fascinantes sur les stars, les étoiles et l'univers. Les ancêtres Dogons sont vus comme des guides spirituels qui protègent toujours leur peuple.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Dogons parlent le dogon. C'est une langue riche avec différents dialectes selon les villages. La langue dogon est le cœur de leur culture.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Dogons ont des traditions très fortes. Ils célèbrent la fête du Sigui, une grande fête qui revient tous les 60 ans. Pendant cette fête, c'est une explosion de danse, de musique et de célébration. Les Dogons respectent aussi les rites de passage, comme l'initiation des jeunes garçons.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Dogons sont très connus pour leurs beaux Bokolans - c'est du tissu peint à la main avec des motifs géométriques magnifiques en noir et blanc. Ils créent aussi des masques traditionnels qui sont utilisés dans les cérémonies. Leurs sculptures en bois et leurs bijoux sont très appréciés. Les Dogons s'habillent avec des vêtements simples mais colorés et pleins de sens.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PEULS -->
+<div id="peul" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Peuls</h2>
+            <div class="image-placeholder">[Image représentant la culture Peule - Bergers avec leurs troupeaux]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Peuls sont un peuple de pasteurs et de bergers. Ils viennent des savanes et des steppes du Mali. Leur histoire raconte qu'ils sont des éleveurs de bétail qui se sont installés dans les régions où l'herbe pousse bien pour nourrir leurs troupeaux. Les Peuls sont connus partout en Afrique de l'Ouest comme des éleveurs respectés.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Peuls étaient des guerriers et des chefs pastoraux. Ils ont mené de grands royaumes au Mali. Les Peuls gardent en mémoire leurs ancêtres qui ont construit des empires comme celui du Macina. Respecter les ancêtres, c'est respecter l'honneur de la famille.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Peuls parlent le peul (ou fulfulde). C'est une belle langue avec beaucoup de poésie. Beaucoup de Peuls sont aussi poètes et conteurs traditionnels.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Peuls ont une très grande fierté. Ils respectent les codes d'honneur et de dignité. Le mariage Peul est une grande célébration avec beaucoup de danses et de chants. Les Peuls font aussi des compétitions d'élevage et des foires où ils montrent leurs plus beaux animaux.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Peuls sont admirés pour leur élégance et leur style. Les femmes Peules portent des bijoux magnifiques - des boucles d'oreilles dorées, des colliers longs et des bagues. Ils s'habillent avec des vêtements colorés et des tissus raffinés. Les Peuls créent aussi de la poterie, des objets en cuir et de l'artisanat très fin.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SONRHAÏ -->
+<div id="sonrhai" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Sonrhaï</h2>
+            <div class="image-placeholder">[Image représentant la culture Sonrhaï - Fleuve Niger, Tombouctou]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Sonrhaï sont originaires des bords du fleuve Niger, surtout autour de Tombouctou et Gao. Ils sont les navigateurs et les pêcheurs du Mali. Selon leur histoire, ils se sont installés le long du fleuve depuis très longtemps. Le Niger, c'est leur vie - c'est d'où ils tirent tout.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Sonrhaï étaient les fondateurs de l'empire Sonrhaï, un des plus grands empires du Mali. Askia Mohamed est leur plus grand ancêtre, un roi puissant et sage. Les Sonrhaï sont fiers de cet héritage d'un grand empire.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Sonrhaï parlent le sonrhaï. C'est la langue qu'on entend beaucoup à Tombouctou et dans la région du fleuve Niger.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Sonrhaï ont des traditions liées au fleuve Niger. Ils célèbrent la moisson avec des fêtes. Les familles Sonrhaï sont très unies et respectent beaucoup les aînés. Les pêcheurs Sonrhaï ont aussi leurs propres rituels pour demander une bonne pêche.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Sonrhaï créent des pirogues magnifiques pour naviguer sur le Niger. Ils font aussi de la poterie et des tissus teints. Leurs vêtements sont colorés et pratiques pour le climat chaud. Beaucoup de Sonrhaï sont aussi des commerçants connus et respectés.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SONINKÉ -->
+<div id="soninke" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Soninké</h2>
+            <div class="image-placeholder">[Image représentant la culture Soninké - Architecture traditionnelle]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Soninké sont originaires de la région de Kayes et du sud-ouest du Mali. Selon leur légende, ils sont les fondateurs du grand empire du Ghana antique. Ce sont des gens commerçants et travailleurs qui ont bâti des routes commerciales et des villes prospères.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Soninké sont des rois et des guerriers légendaires. Ils ont fondé l'empire du Ghana et ont été les premiers à créer un système d'échange commercial très avancé. Les Soninké sont très fiers de ce passé glorieux.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Soninké parlent le soninké. C'est une belle langue avec une riche tradition orale.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Soninké ont un grand respect pour la parole donnée et l'honneur. Ils sont connus comme des gens sérieux et dignes. Les mariages Soninké sont des événements importants où toute la famille se réunit. Ils célèbrent aussi les récoltes avec beaucoup de joie.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Soninké sont des artisans habiles. Ils créent du cuir de très bonne qualité, des chaussures et des ceintures. Leurs maisons sont bien construites avec un style architectural particulier. Les Soninké s'habillent avec des vêtements élégants et des tissu de qualité.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MALINKÉ -->
+<div id="malinke" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Malinké</h2>
+            <div class="image-placeholder">[Image représentant la culture Malinké - Instruments traditionnels]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Malinké viennent de la région sud du Mali et du pays Mandingue. Ils sont les descendants du grand empire du Mali, un des empires les plus puissants d'Afrique. Le nom "Mali" vient d'eux. Ils se sont installés dans les zones forestières où poussent les cultures.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les Malinké ont eu des ancêtres très célèbres. Soundjata Keïta est leur plus grand héros - c'est lui qui a fondé l'empire du Mali. Les Malinké racontent des épopées magnifiques sur leurs ancêtres, ce qu'on appelle la "Sundiata".</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Malinké parlent le malinké (ou mandingue). C'est une langue riche avec une grande tradition de contes et d'histoires.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Malinké sont des maîtres de la tradition orale. Les griots Malinké sont très respectés - ce sont les gardiens des histoires et de la généalogie des familles. Les Malinké font de grandes fêtes de mariage qui durent plusieurs jours. Ils respectent aussi les initiations traditionnelles.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Malinké sont célèbres pour leur musique. La kora (une harpe traditionnelle) et le kalam (le balafon) sont des instruments Malinké. Ils créent aussi de beaux tissus, des sculptures, et des objets en métal. Leurs vêtements sont colorés et portent souvent des motifs avec une signification.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BAMBARA -->
+<div id="bambara" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Bambara</h2>
+            <div class="image-placeholder">[Image représentant la culture Bambara - Masques et cérémonies]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Bambara sont originaires du centre du Mali, surtout autour de Ségou et Kaarta. C'est un peuple fort et travailleur qui a construit des royaumes puissants. Ils se sont installés dans les terres fertiles où l'agriculture prospère.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Bambara sont des guerriers et des chefs qui ont fondé l'empire de Ségou, très puissant. Ils sont aussi connus pour avoir créé des sociétés secrètes spirituelles très respectées. Les Bambara vénèrent beaucoup leurs ancêtres à travers des cérémonies.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Bambara parlent le bambara (ou bamanankan). C'est une des langues les plus parlées au Mali.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Bambara ont des traditions spirituelles très fortes. Ils sont connus pour leurs sociétés d'initiation comme la société Komo et la Koré. Ces sociétés ont des secrets et des cérémonies qui ordonnent la vie du peuple. Les Bambara font aussi des cérémonies pour honorer les ancêtres et la nature.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Bambara créent des masques spectaculaires - les masques Komo avec des cornes, les masques Kore - ils sont magnifiques et impressionnants. Ils font aussi de sculptures en bois très fines, de la poterie et des tissus. Les Bambara s'habillent avec des vêtements aux couleurs vives et avec beaucoup de style.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TOUAREG -->
+<div id="tuareg" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Touareg</h2>
+            <div class="image-placeholder">[Image représentant la culture Touareg - Désert, tentes bleues]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Touareg viennent du désert du Sahara. Ce sont les maîtres du désert, des nomades qui voyagent avec leurs troupeaux à travers les sables du Mali et du Sahara. Ils se sont adaptés à la vie difficile du désert et y ont créé une civilisation unique.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Touareg étaient les gardiens du Sahara. Ils ont créé les routes commerciales du désert et ont été des guerriers redoutés appelés les "Hommes bleus du Sahara". Les Touareg sont très fiers de leur liberté et de leur indépendance.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Touareg parlent le tamasheq (ou tamachek). C'est une langue du désert avec une écriture ancienne appelée le tifinagh.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Touareg ont des traditions nomades uniques. Ils vivent sous des tentes et se déplacent selon les saisons. Leurs mariages sont des fêtes avec de la musique et de la danse. Les Touareg respectent beaucoup les femmes - ce sont souvent elles qui gardent la richesse et le prestige de la famille.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Touareg sont célèbres pour leurs vêtements bleus indigo qui teintent la peau. Ils créent des bijoux d'argent très beaux avec des motifs géométriques. Les Touareg sont aussi des musiciens - le tinde (un tambour) et les guitares sont très importants. Ils tressent aussi des tapis et font de l'artisanat du cuir.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOZO -->
+<div id="bozo" class="detail-page">
+    <button class="back-button" onclick="backHome()">← Retour</button>
+    <div class="container">
+        <div class="detail-content">
+            <h2>Les Bozos</h2>
+            <div class="image-placeholder">[Image représentant la culture Bozo - Pêche sur le fleuve Niger]</div>
+
+            <div class="detail-section">
+                <h3>Origines</h3>
+                <p>Les Bozos sont les vrais maîtres du fleuve Niger. Ils viennent des rives du fleuve, surtout dans la région de Djenné et Mopti. Ce sont des pêcheurs et des navigateurs depuis les temps anciens. Le fleuve Niger, c'est leur maison, c'est leur vie.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Les Ancêtres</h3>
+                <p>Les ancêtres Bozos étaient des pêcheurs et des commerçants du fleuve. Ils ont développé des techniques de pêche très avancées et ont fondé les grandes villes marchandes de Djenné. Les Bozos sont aussi connus pour être des constructeurs de pirogues exceptionnels.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Langue</h3>
+                <p>Les Bozos parlent le bozo. C'est une langue de rivière avec ses propres caractéristiques et expressions.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Traditions et Coutumes</h3>
+                <p>Les Bozos ont des traditions très liées à l'eau. Ils respectent le fleuve comme une divinité. Les familles Bozo sont très unies autour de la pêche et du commerce fluvial. Ils célèbrent avec des danses et des chants liés à la moisson de poissons.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Culture et Artisanat</h3>
+                <p>Les Bozos sont maîtres dans la construction des pirogues - ce sont des œuvres d'art! Ils font aussi de beaux filets de pêche en tissage délicat. Leurs vêtements sont pratiques et adaptés à la vie sur l'eau. Beaucoup de Bozos sont aussi des musiciens et des conteurs.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pays</h3>
+                <p>Mali</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showEthnie(ethnie) {
+        document.getElementById('homePage').style.display = 'none';
+        document.querySelectorAll('.detail-page').forEach(page => page.classList.remove('active'));
+        document.getElementById(ethnie).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    function backHome() {
+        document.getElementById('homePage').style.display = 'block';
+        document.querySelectorAll('.detail-page').forEach(page => page.classList.remove('active'));
+        window.scrollTo(0, 0);
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        alert('Merci pour ton message ! On va te contacter bientôt par WhatsApp ou email.');
+        event.target.reset();
+    }
+</script>
+
+</body>
+</html>
